@@ -9,17 +9,21 @@ export default class Db {
 
 
     addTab = () => {
+
+        const tabId = Math.floor(Math.random() * 10000000);
+        const listId = Math.floor(Math.random() * 10000000);
+        const cardId = Math.floor(Math.random() * 10000000);
         const newTab = {
-          id: Math.floor(Math.random() * 10000000),
-          title: "New Tab",
+          id: tabId,
+          title: `tab ${tabId}`,
           lists: [
             {
-              id: Math.floor(Math.random() * 10000000),
-              title: "List 1",
+              id: listId,
+              title: `list ${listId}`,
               cards: [
                 {
-                  id: Math.floor(Math.random() * 10000000),
-                  title: "Card 1",
+                  id: cardId,
+                  title: `card ${cardId}`,
                   description: "Description 1",
                 }
               ]

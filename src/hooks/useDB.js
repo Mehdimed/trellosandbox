@@ -5,15 +5,15 @@ export const useDB = () => {
   const [tabs, setTabs] = useState([]);
   const [activeTab, setActiveTab] = useState({});
 
-  useEffect(() => {
-    fetch("http://localhost:3000/tabs")
-      .then((res) => res.json())
-      .then((data) => {
-        updateTabs(data);
-        updateActiveTab(data[0]);
-      });
+  // useEffect(() => {
+    // fetch("http://localhost:3000/tabs")
+    //   .then((res) => res.json())
+    //   .then((data) => {
+        // updateTabs(data);
+        // updateActiveTab(data[0]);
+      // });
 
-  }, []);
+  // }, []);
 
   const updateActiveTab = (tab) => {
     setActiveTab(tab);

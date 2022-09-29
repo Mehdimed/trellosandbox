@@ -64,7 +64,10 @@ const Header = () => {
             {db.tabs.map((tab) => (
                 <HeaderButton key={tab.id} onClick={() => db.updateActiveTab(tab)} active={tab === db.activeTab}>
                     <Title>{tab.title}</Title>
-                    <ImgContainer active={tab === db.activeTab} onClick={() => db.deleteTab(tab)}>
+                    <ImgContainer active={tab === db.activeTab} onClick={(e) => {
+                       e.stopPropagation();
+                       db.deleteTab(tab);
+                    }}>
                         <X size={16}/>
                     </ImgContainer>
                 </HeaderButton>
