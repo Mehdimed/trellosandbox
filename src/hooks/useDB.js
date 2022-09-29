@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import Db from '../utils/Db';
 
 export const useDB = () => {

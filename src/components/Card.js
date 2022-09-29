@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { Backspace, Trash } from "phosphor-react";
+import { Trash } from "phosphor-react";
 import React from "react";
 import { TabsContext } from "../utils/context";
 
